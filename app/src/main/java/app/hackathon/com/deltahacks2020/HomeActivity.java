@@ -21,6 +21,6 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
         FirebaseApp.initializeApp(this);
-        getPermissions();
+        //getPermissions();
     }
 }

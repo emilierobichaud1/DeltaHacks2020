@@ -45,7 +45,7 @@ public class SignupActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_signup);
+        //setContentView(R.layout.activity_signup);
 
         mAuth = FirebaseAuth.getInstance();
         database = FirebaseDatabase.getInstance();
@@ -54,11 +54,11 @@ public class SignupActivity extends AppCompatActivity {
 
         //TODO add names of buttons and text fields
         //Get parts of the layout
-        signUpButton = (Button) findViewById(R.id.signUpButton);
-        cancelButton = (Button) findViewById(R.id.cancelButton);
-        userText = (EditText) findViewById(R.id.usernameEditText);
-        emailText = (EditText) findViewById(R.id.emailEditText);
-        nameText = (EditText) findViewById(R.id.nameEditText);
+        //signUpButton = (Button) findViewById(R.id.signUpButton);
+        //cancelButton = (Button) findViewById(R.id.cancelButton);
+        //userText = (EditText) findViewById(R.id.usernameEditText);
+        //emailText = (EditText) findViewById(R.id.emailEditText);
+        //nameText = (EditText) findViewById(R.id.nameEditText);
 
         progressDialog = new ProgressDialog(this);
 
@@ -143,7 +143,7 @@ public class SignupActivity extends AppCompatActivity {
         //PayPalUser userinfo = new PayPalUser();
 
         //Create user object to pass into database call
-        currentUser = new User(name, email, userinfo);
+        //currentUser = new User(name, email, userinfo);
         //currentUser.addEvent("");
 
         //add users/ to front of node name to keep database easily searchable
