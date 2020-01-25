@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "106074640241",
+    "firebase_url": "https://hackathon-8e44f.firebaseio.com",
+    "project_id": "hackathon-8e44f",
+    "storage_bucket": "hackathon-8e44f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:106074640241:android:017c39468a074679ef30d0",
+        "android_client_info": {
+          "package_name": "app.hackathon.com.deltahacks2020"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "106074640241-lamh2jd02dcvhrtsfc91762ln99ftbm5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCWZp7nMP0bO7nUcrdrmUNKcjabxCu-1nQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "106074640241-lamh2jd02dcvhrtsfc91762ln99ftbm5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
