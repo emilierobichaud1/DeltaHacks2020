@@ -83,22 +83,18 @@ public class SignupActivity extends AppCompatActivity {
 
     private void registerUser() {
         //Get info from fields
-        String username = userText.getText().toString().trim();
+        //String username = userText.getText().toString().trim();
         String email = emailText.getText().toString().trim();
         String password = passwordText.getText().toString().trim();
         String passwordConf = passwordConfText.getText().toString().trim();
         String name = nameText.getText().toString().trim();
         Pattern p = Pattern.compile("[^a-z0-9 ]", Pattern.CASE_INSENSITIVE);
-        Matcher m = p.matcher(username);
+        //Matcher m = p.matcher(username);
         Matcher m2 = p.matcher(password);
-        boolean b = m.find();
+        //boolean b = m.find();
         boolean b2 = m2.find();
 
         //Error check user input here
-        if (TextUtils.isEmpty(username)) {
-            Toast.makeText(this, "Please enter username", Toast.LENGTH_SHORT).show();  //Toast is popup msg at bottom
-            return; //Return to stop registration
-        }
         if (TextUtils.isEmpty(password)) {
             Toast.makeText(this, "Please enter password", Toast.LENGTH_SHORT).show();
             return;
@@ -152,9 +148,9 @@ public class SignupActivity extends AppCompatActivity {
         //Creates new node in database and saves data
         myRef.child(node).setValue(currentUser);
 
-        //Save username to username list (for login with username)
-        String usernameList = "users/usernames/" + username;
-        myRef.child(usernameList).setValue(email);
+        //Save email to username list (for login with email)
+        //String usernameList = "users/emails/" + email;
+        myRef.setValue(email);
     }
 
     public void cancel(View view) {
