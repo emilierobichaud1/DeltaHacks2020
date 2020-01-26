@@ -45,7 +45,7 @@ public class SignupActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private FirebaseDatabase database;
     private DatabaseReference myRef;
-    private Button signUpButton;
+    private Button nextButton;
     private Button cancelButton;
     private Button paypalButton;
     private EditText userText;
@@ -72,7 +72,7 @@ public class SignupActivity extends AppCompatActivity {
 
         //TODO add names of buttons and text fields
         //Get parts of the layout
-        signUpButton = (Button) findViewById(R.id.next_sign_in_btn);
+        nextButton = (Button) findViewById(R.id.next_sign_in_btn);
         //cancelButton = (Button) findViewById(R.id.cancelButton);
         //userText = (EditText) findViewById(R.id.usernameEditText);
         emailText = (EditText) findViewById(R.id.email_signup);
@@ -83,7 +83,7 @@ public class SignupActivity extends AppCompatActivity {
         progressDialog = new ProgressDialog(this);
 
 
-        signUpButton.setOnClickListener(new View.OnClickListener() {
+        nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 registerUser();
@@ -128,7 +128,7 @@ public class SignupActivity extends AppCompatActivity {
         String email = emailText.getText().toString().trim();
         String password = passwordText.getText().toString().trim();
         String passwordConf = passwordConfText.getText().toString().trim();
-        String name = nameText.getText().toString().trim();
+        //String name = nameText.getText().toString().trim();
         Pattern p = Pattern.compile("[^a-z0-9 ]", Pattern.CASE_INSENSITIVE);
         //Matcher m = p.matcher(username);
         Matcher m2 = p.matcher(password);
@@ -160,7 +160,8 @@ public class SignupActivity extends AppCompatActivity {
                     Toast.makeText(SignupActivity.this, "Registered Successfully", Toast.LENGTH_SHORT).show();
                     FirebaseUser user = mAuth.getCurrentUser();
                     saveUserInfo(user.getUid());    //add properties to database
-                    updateView(null);
+                    //TODO set for charity selection screen
+                    //setContentView(R.layout.activity_home);
 
                 } else {
                     Toast.makeText(SignupActivity.this, "Unsuccessful registration. Please try again.", Toast.LENGTH_SHORT).show();
