@@ -51,6 +51,7 @@ public class SignupActivity extends AppCompatActivity {
     private EditText userText;
     private EditText emailText;
     private EditText passwordText;
+    private EditText conPasswordText;
     private EditText passwordConfText;
     private EditText nameText;
     private FirebaseUser user;
@@ -71,10 +72,12 @@ public class SignupActivity extends AppCompatActivity {
 
         //TODO add names of buttons and text fields
         //Get parts of the layout
-        //signUpButton = (Button) findViewById(R.id.signUpButton);
+        signUpButton = (Button) findViewById(R.id.next_sign_in_btn);
         //cancelButton = (Button) findViewById(R.id.cancelButton);
         //userText = (EditText) findViewById(R.id.usernameEditText);
-        //emailText = (EditText) findViewById(R.id.emailEditText);
+        emailText = (EditText) findViewById(R.id.email_signup);
+        passwordText = (EditText) findViewById(R.id.password_signup2);
+        conPasswordText = (EditText) findViewById(R.id.repassword_signup);
         //nameText = (EditText) findViewById(R.id.nameEditText);
 
         progressDialog = new ProgressDialog(this);
