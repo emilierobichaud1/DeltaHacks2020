@@ -24,8 +24,7 @@
         android:layout_width="230dp"
         android:layout_height="25dp"
         android:layout_marginTop="40dp"
-        android:hint="passwprd"
-        android:text="  Password"
+        android:hint="password"
         android:textSize="18sp"
         android:textColor="@color/Whitey"
         android:background="@drawable/border"
@@ -41,7 +40,6 @@
         android:layout_height="25dp"
         android:layout_marginTop="40dp"
         android:hint="confirm password"
-        android:text="Confirm Password"
         android:textSize="18sp"
         android:textColor="@color/Whitey"
         android:background="@drawable/border"
@@ -55,15 +53,14 @@
         android:id="@+id/email_signup"
         android:layout_width="230dp"
         android:layout_height="25dp"
-        android:layout_marginTop="364dp"
+        android:layout_marginTop="288dp"
         android:background="@drawable/border"
         android:gravity="center"
-        android:hint="Email"
-        android:text="Email"
+        android:hint="email"
         android:textColor="@color/Whitey"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintHorizontal_bias="0.464"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -83,14 +80,4 @@
         app:layout_constraintTop_toBottomOf="@+id/repassword_signup"
         app:layout_constraintVertical_bias="0.437" />
 
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="39dp"
-        android:layout_height="42dp"
-        app:layout_constraintBottom_toTopOf="@+id/next_sign_in_btn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/repassword_signup"
-        app:layout_constraintVertical_bias="0.657"
-        app:srcCompat="@drawable/common_google_signin_btn_icon_light" />
 </androidx.constraintlayout.widget.ConstraintLayout>
