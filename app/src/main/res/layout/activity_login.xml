@@ -25,11 +25,11 @@
 
     <EditText
         android:id="@+id/password_text"
-        android:layout_width="271dp"
-        android:layout_height="46dp"
+        android:layout_width="272dp"
+        android:layout_height="47dp"
         android:ems="10"
         android:hint="Password"
-        android:inputType="textPassword"
+        android:inputType="text"
         android:text="Password"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
