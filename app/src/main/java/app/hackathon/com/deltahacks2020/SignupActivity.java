@@ -3,6 +3,7 @@ package app.hackathon.com.deltahacks2020;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -10,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.braintreegateway.BraintreeGateway;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -17,6 +19,19 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+
+import com.paypal.android.sdk.payments.PayPalAuthorization;
+import com.paypal.android.sdk.payments.PayPalConfiguration;
+import com.paypal.android.sdk.payments.PayPalFuturePaymentActivity;
+import com.paypal.android.sdk.payments.PayPalItem;
+import com.paypal.android.sdk.payments.PayPalOAuthScopes;
+import com.paypal.android.sdk.payments.PayPalPayment;
+import com.paypal.android.sdk.payments.PayPalPaymentDetails;
+import com.paypal.android.sdk.payments.PayPalProfileSharingActivity;
+import com.paypal.android.sdk.payments.PayPalService;
+import com.paypal.android.sdk.payments.PaymentActivity;
+import com.paypal.android.sdk.payments.PaymentConfirmation;
+import com.paypal.android.sdk.payments.ShippingAddress;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -32,6 +47,7 @@ public class SignupActivity extends AppCompatActivity {
     private DatabaseReference myRef;
     private Button signUpButton;
     private Button cancelButton;
+    private Button paypalButton;
     private EditText userText;
     private EditText emailText;
     private EditText passwordText;
@@ -50,6 +66,7 @@ public class SignupActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         database = FirebaseDatabase.getInstance();
         myRef = database.getReference();
+
 
 
         //TODO add names of buttons and text fields
@@ -79,6 +96,27 @@ public class SignupActivity extends AppCompatActivity {
 
             }
         });
+
+        paypalButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                paypalSignIn();
+
+            }
+        });
+    }
+
+    private static PayPalConfiguration config = new PayPalConfiguration()
+            .environment(PayPalConfiguration.ENVIRONMENT_SANDBOX)
+
+            .clientId("AdO1kcwyqqZ8tcePodMO8LNpPpE6JH1dqxxqu5PJ-8qcBNpTVyHvJtwECuaJY4F9Az9vDACix1Z-x_OG")
+            .merchantName("Charity")
+            .merchantPrivacyPolicyUri(Uri.parse("https://www.example.com/privacy"))
+            .merchantUserAgreementUri(Uri.parse("https://www.example.com/legal"));
+
+    private void paypalSignIn() {
+
+
     }
 
     private void registerUser() {
