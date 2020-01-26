@@ -14,11 +14,14 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="499dp"
         android:layout_marginBottom="53dp"
+        android:background="@drawable/button_rounded"
         android:text="@string/Button_Sign_Up"
         app:layout_constraintBottom_toTopOf="@+id/Login_Button"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/Login_Button"
@@ -30,6 +33,7 @@
         android:layout_marginRight="16dp"
         android:layout_marginBottom="83dp"
         android:text="@string/Button_Login"
+        android:background="@drawable/button_rounded"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
