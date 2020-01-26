@@ -4,9 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeActivity"
     android:background="@drawable/koala_background"
-    >
+    tools:context=".HomeActivity">
+
+    <TextView
+        android:id="@+id/title4"
+        android:layout_width="242dp"
+        android:layout_height="138dp"
+        android:fontFamily="@font/pacifico"
+        android:text="changify"
+        android:textColor="@color/Orange"
+        android:textSize="70"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="5dp" />
 
     <Button
         android:id="@+id/Sign_Up_Button"
@@ -14,8 +26,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="499dp"
         android:layout_marginBottom="53dp"
-        android:background="@drawable/button_rounded"
+        android:background="@drawable/border"
+        android:backgroundTint="@color/Turquoise"
         android:text="@string/Button_Sign_Up"
+        android:textColor="@color/Whitey"
         app:layout_constraintBottom_toTopOf="@+id/Login_Button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
@@ -32,19 +46,12 @@
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginBottom="83dp"
-        android:text="@string/Button_Login"
         android:background="@drawable/button_rounded"
+        android:backgroundTint="@color/Turquoise"
+        android:text="@string/Button_Login"
+        android:textColor="@color/Whitey"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="114dp"
-        android:layout_height="93dp"
-        android:text="TextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="86dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
