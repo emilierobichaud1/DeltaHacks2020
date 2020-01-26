@@ -29,9 +29,11 @@
         android:textColor="@color/Whitey"
         android:background="@drawable/border"
         android:gravity="center"
+        android:password="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/email_signup" />
+        app:layout_constraintTop_toBottomOf="@+id/email_signup"
+        tools:ignore="Deprecated" />
 
 
     <EditText
@@ -44,9 +46,11 @@
         android:textColor="@color/Whitey"
         android:background="@drawable/border"
         android:gravity="center"
+        android:password="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password_signup2" />
+        app:layout_constraintTop_toBottomOf="@+id/password_signup2"
+        tools:ignore="Deprecated" />
 
 
     <EditText
